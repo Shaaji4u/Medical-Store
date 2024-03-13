@@ -5,6 +5,7 @@ if (isset($_GET['category']))
 {
 	if ($con->query("delete from categories where id = '$_GET[category]'")) 
 	{
+		#this will redirect the user to manager cat
 		header("location:manageCat.php");
 	}
 	else
